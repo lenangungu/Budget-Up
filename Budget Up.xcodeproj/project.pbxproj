@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83379129136F90DF4558A0FE /* Pods_Budget_Up.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACD94F7B4CD5420AFADB7C8 /* Pods_Budget_Up.framework */; };
 		8A46ED7A1F2D3A4D00C1A74E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A46ED791F2D3A4D00C1A74E /* AppDelegate.swift */; };
 		8A46ED7C1F2D3A4D00C1A74E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A46ED7B1F2D3A4D00C1A74E /* ViewController.swift */; };
 		8A46ED7F1F2D3A4D00C1A74E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A46ED7D1F2D3A4D00C1A74E /* Main.storyboard */; };
 		8A46ED811F2D3A4D00C1A74E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A46ED801F2D3A4D00C1A74E /* Assets.xcassets */; };
 		8A46ED841F2D3A4D00C1A74E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A46ED821F2D3A4D00C1A74E /* LaunchScreen.storyboard */; };
+		8A46ED8E1F2D59D700C1A74E /* FoldingCellTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A46ED8D1F2D59D700C1A74E /* FoldingCellTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		59BE0A012C915C73A3A12438 /* Pods-Budget Up.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budget Up.release.xcconfig"; path = "Pods/Target Support Files/Pods-Budget Up/Pods-Budget Up.release.xcconfig"; sourceTree = "<group>"; };
 		8A46ED761F2D3A4D00C1A74E /* Budget Up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Budget Up.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A46ED791F2D3A4D00C1A74E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A46ED7B1F2D3A4D00C1A74E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,9 @@
 		8A46ED801F2D3A4D00C1A74E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A46ED831F2D3A4D00C1A74E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A46ED851F2D3A4D00C1A74E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A46ED8D1F2D59D700C1A74E /* FoldingCellTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingCellTableViewController.swift; sourceTree = "<group>"; };
+		E07AEC857FB080A0B3D75E9C /* Pods-Budget Up.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budget Up.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Budget Up/Pods-Budget Up.debug.xcconfig"; sourceTree = "<group>"; };
+		EACD94F7B4CD5420AFADB7C8 /* Pods_Budget_Up.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Budget_Up.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83379129136F90DF4558A0FE /* Pods_Budget_Up.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F8DF947BCF337A472E3BEBD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E07AEC857FB080A0B3D75E9C /* Pods-Budget Up.debug.xcconfig */,
+				59BE0A012C915C73A3A12438 /* Pods-Budget Up.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8A46ED6D1F2D3A4D00C1A74E = {
 			isa = PBXGroup;
 			children = (
 				8A46ED781F2D3A4D00C1A74E /* Budget Up */,
 				8A46ED771F2D3A4D00C1A74E /* Products */,
+				3F8DF947BCF337A472E3BEBD /* Pods */,
+				EA36CE504FF438BDA3A03DE6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +74,21 @@
 			children = (
 				8A46ED791F2D3A4D00C1A74E /* AppDelegate.swift */,
 				8A46ED7B1F2D3A4D00C1A74E /* ViewController.swift */,
+				8A46ED8D1F2D59D700C1A74E /* FoldingCellTableViewController.swift */,
 				8A46ED7D1F2D3A4D00C1A74E /* Main.storyboard */,
 				8A46ED801F2D3A4D00C1A74E /* Assets.xcassets */,
 				8A46ED821F2D3A4D00C1A74E /* LaunchScreen.storyboard */,
 				8A46ED851F2D3A4D00C1A74E /* Info.plist */,
 			);
 			path = "Budget Up";
+			sourceTree = "<group>";
+		};
+		EA36CE504FF438BDA3A03DE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EACD94F7B4CD5420AFADB7C8 /* Pods_Budget_Up.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A46ED881F2D3A4D00C1A74E /* Build configuration list for PBXNativeTarget "Budget Up" */;
 			buildPhases = (
+				BF0F93E397F0D6D61835B89E /* [CP] Check Pods Manifest.lock */,
 				8A46ED721F2D3A4D00C1A74E /* Sources */,
 				8A46ED731F2D3A4D00C1A74E /* Frameworks */,
 				8A46ED741F2D3A4D00C1A74E /* Resources */,
+				656A2F9AB4D5C958D8AAF8C4 /* [CP] Embed Pods Frameworks */,
+				C249EE6CD98BD9C01F489014 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +161,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		656A2F9AB4D5C958D8AAF8C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Budget Up/Pods-Budget Up-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF0F93E397F0D6D61835B89E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C249EE6CD98BD9C01F489014 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Budget Up/Pods-Budget Up-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8A46ED721F2D3A4D00C1A74E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -138,6 +216,7 @@
 			files = (
 				8A46ED7C1F2D3A4D00C1A74E /* ViewController.swift in Sources */,
 				8A46ED7A1F2D3A4D00C1A74E /* AppDelegate.swift in Sources */,
+				8A46ED8E1F2D59D700C1A74E /* FoldingCellTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +337,7 @@
 		};
 		8A46ED891F2D3A4D00C1A74E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E07AEC857FB080A0B3D75E9C /* Pods-Budget Up.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Budget Up/Info.plist";
@@ -270,6 +350,7 @@
 		};
 		8A46ED8A1F2D3A4D00C1A74E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59BE0A012C915C73A3A12438 /* Pods-Budget Up.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Budget Up/Info.plist";
@@ -299,6 +380,7 @@
 				8A46ED8A1F2D3A4D00C1A74E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

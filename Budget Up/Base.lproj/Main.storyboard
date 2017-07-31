@@ -1,26 +1,72 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oEV-Sq-6nZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Folding Cell Table View Controller-->
+        <scene sceneID="NK7-RE-L0d">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="oEV-Sq-6nZ" customClass="FoldingCellTableViewController" customModule="Budget_Up" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GTc-gs-cbP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoldingCell" rowHeight="300" id="gcS-a9-WmN" customClass="FoldingCell" customModule="FoldingCell">
+                                <rect key="frame" x="0.0" y="28" width="375" height="300"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gcS-a9-WmN" id="wkD-Io-MgF">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UtJ-bV-QjT" customClass="RotatedView" customModule="FoldingCell">
+                                            <rect key="frame" x="16" y="16" width="343" height="75"/>
+                                            <color key="backgroundColor" red="0.38509114579999998" green="0.8579101562" blue="0.81879340280000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="75" id="2CT-ok-k42"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGQ-mA-lsv">
+                                            <rect key="frame" x="16" y="113" width="343" height="456"/>
+                                            <color key="backgroundColor" red="0.84293619789999996" green="0.72260199650000001" blue="0.94338650170000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="456" id="LQ3-dc-Fi5"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="PGQ-mA-lsv" secondAttribute="trailing" constant="8" id="KgJ-YT-Cw3"/>
+                                        <constraint firstItem="UtJ-bV-QjT" firstAttribute="top" secondItem="wkD-Io-MgF" secondAttribute="topMargin" constant="8" id="Wx0-vJ-Wcv"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="UtJ-bV-QjT" secondAttribute="trailing" constant="8" id="eUs-4I-mEm"/>
+                                        <constraint firstItem="PGQ-mA-lsv" firstAttribute="top" secondItem="UtJ-bV-QjT" secondAttribute="top" constant="97" id="lyI-gh-PqB"/>
+                                        <constraint firstItem="UtJ-bV-QjT" firstAttribute="leading" secondItem="wkD-Io-MgF" secondAttribute="leadingMargin" constant="8" id="qc3-Zi-7ge"/>
+                                        <constraint firstItem="PGQ-mA-lsv" firstAttribute="leading" secondItem="wkD-Io-MgF" secondAttribute="leadingMargin" constant="8" id="yxk-I9-oaW"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="containerView" destination="PGQ-mA-lsv" id="vAV-lv-Qxr"/>
+                                    <outlet property="containerViewTop" destination="lyI-gh-PqB" id="BZs-zX-MRr"/>
+                                    <outlet property="foregroundView" destination="UtJ-bV-QjT" id="TnM-no-7wP"/>
+                                    <outlet property="foregroundViewTop" destination="Wx0-vJ-Wcv" id="hTP-xt-1o7"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oEV-Sq-6nZ" id="avc-O6-s5U"/>
+                            <outlet property="delegate" destination="oEV-Sq-6nZ" id="c8i-EJ-JY2"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YDC-NX-7WQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="890" y="27"/>
         </scene>
     </scenes>
 </document>
