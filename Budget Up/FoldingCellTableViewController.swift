@@ -17,6 +17,7 @@ fileprivate struct C {
 }
 
 class FoldingCellTableViewController: UITableViewController {
+    
     var kCloseCellHeight: CGFloat = 100
     var kOpenCellHeight: CGFloat = 456
  //   @IBOutlet var FoldingTableView: UITableView!

@@ -27,6 +27,8 @@ import UIKit
 open class FoldingCell: UITableViewCell {
   
   /// UIView whitch display when cell open
+    
+    
   @IBOutlet weak open var containerView: UIView!
   @IBOutlet weak open var containerViewTop: NSLayoutConstraint!
   
