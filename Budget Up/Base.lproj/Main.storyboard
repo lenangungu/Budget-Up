@@ -14,7 +14,7 @@
         <scene sceneID="NK7-RE-L0d">
             <objects>
                 <tableViewController id="oEV-Sq-6nZ" customClass="FoldingCellTableViewController" customModule="Budget_Up" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GTc-gs-cbP">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Folding" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GTc-gs-cbP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="600"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gcS-a9-WmN" id="wkD-Io-MgF">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="599.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UtJ-bV-QjT" customClass="RotatedView" customModule="FoldingCell">
@@ -71,19 +71,31 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGQ-mA-lsv">
                                             <rect key="frame" x="16" y="113" width="343" height="456"/>
                                             <subviews>
-                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2t8-9H-lQq">
+                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ExpensesTableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2t8-9H-lQq" userLabel="ExpenseTableView">
                                                     <rect key="frame" x="0.0" y="0.0" width="343" height="456"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <prototypes>
-                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ZvZ-MW-POm">
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExpensesCell" id="ZvZ-MW-POm" customClass="ExpensesTableViewCell" customModule="Budget_Up" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZvZ-MW-POm" id="Cpt-7r-CIP">
                                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysp-o5-lnw">
+                                                                        <rect key="frame" x="70" y="8" width="42" height="21"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
                                                             </tableViewCellContentView>
                                                         </tableViewCell>
                                                     </prototypes>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="oEV-Sq-6nZ" id="ARO-aO-YtJ"/>
+                                                    </connections>
                                                 </tableView>
                                             </subviews>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -107,10 +119,12 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="PayAmountTextField" destination="IS2-X4-Uqd" id="WhF-5v-25u"/>
                                     <outlet property="containerView" destination="PGQ-mA-lsv" id="vAV-lv-Qxr"/>
                                     <outlet property="containerViewTop" destination="lyI-gh-PqB" id="BZs-zX-MRr"/>
                                     <outlet property="foregroundView" destination="UtJ-bV-QjT" id="TnM-no-7wP"/>
                                     <outlet property="foregroundViewTop" destination="Wx0-vJ-Wcv" id="hTP-xt-1o7"/>
+                                    <outlet property="payDateTextField" destination="mIg-J8-FOH" id="u2N-GX-x09"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -122,7 +136,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YDC-NX-7WQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888.79999999999995" y="26.53673163418291"/>
+            <point key="canvasLocation" x="922" y="-50"/>
         </scene>
     </scenes>
 </document>

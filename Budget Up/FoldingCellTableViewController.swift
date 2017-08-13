@@ -17,6 +17,8 @@ fileprivate struct C {
 }
 
 class FoldingCellTableViewController: UITableViewController {
+  
+  
     
     var kCloseCellHeight: CGFloat = 100
     var kOpenCellHeight: CGFloat = 456
@@ -73,11 +75,21 @@ class FoldingCellTableViewController: UITableViewController {
    
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FoldingCell", for: indexPath) as! FoldingCell
+      
         
-        return cell
+        if tableView.restorationIdentifier == "ExpensesTableView"
+        {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ExpensesCell", for: indexPath) as! ExpensesTableViewCell
+            return cell
+        }
+        else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FoldingCell", for: indexPath) as! FoldingCell
+            
+            return cell
+        }
     }
     
+   
   
     // MARK: - Table view data source
 
@@ -88,9 +100,20 @@ class FoldingCellTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+       if tableView.restorationIdentifier == "ExpensesTableView"{
+        return 5
+        }
+       else if tableView.restorationIdentifier == "Folding"
+       
+       {
         return 10
+        }
+       else {return 10}
+        
+
     }
 
  
 
 }
+

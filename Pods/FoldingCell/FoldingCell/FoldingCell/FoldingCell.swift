@@ -27,7 +27,9 @@ import UIKit
 open class FoldingCell: UITableViewCell {
   
   /// UIView whitch display when cell open
+    @IBOutlet weak var payDateTextField: UITextField!
     
+    @IBOutlet weak var PayAmountTextField: UITextField!
     
   @IBOutlet weak open var containerView: UIView!
   @IBOutlet weak open var containerViewTop: NSLayoutConstraint!
