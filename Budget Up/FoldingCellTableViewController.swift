@@ -18,7 +18,10 @@ fileprivate struct C {
 
 class FoldingCellTableViewController: UITableViewController {
   
-  
+    //Array to hold each Budget (string for now)
+    var expenses: [String] = [] //Each budget will have many expenses
+    
+    
     
     var kCloseCellHeight: CGFloat = 100
     var kOpenCellHeight: CGFloat = 456
@@ -103,16 +106,21 @@ class FoldingCellTableViewController: UITableViewController {
        if tableView.restorationIdentifier == "ExpensesTableView"{
         return 5
         }
-       else if tableView.restorationIdentifier == "Folding"
+       else if tableView.restorationIdentifier == "BudgetTableView"
        
        {
         return 10
         }
        else {return 10}
-        
 
     }
-
+    /*
+    // After the plus button is pressed: 
+        1)Create an empty cell
+        2)Add it to the array of cell and reload the tableview
+    
+        3)And update it when user is done editind it
+*/
  
 
 }

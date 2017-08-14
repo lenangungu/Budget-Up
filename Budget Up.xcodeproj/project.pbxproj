@@ -15,6 +15,7 @@
 		8A46ED841F2D3A4D00C1A74E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A46ED821F2D3A4D00C1A74E /* LaunchScreen.storyboard */; };
 		8A46ED8E1F2D59D700C1A74E /* FoldingCellTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A46ED8D1F2D59D700C1A74E /* FoldingCellTableViewController.swift */; };
 		8ABBE0AE1F3FC7C2002CD773 /* ExpensesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABBE0AD1F3FC7C2002CD773 /* ExpensesTableViewCell.swift */; };
+		8ABBE0B11F3FEE3F002CD773 /* Expense.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8ABBE0AF1F3FEE3F002CD773 /* Expense.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8A46ED851F2D3A4D00C1A74E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A46ED8D1F2D59D700C1A74E /* FoldingCellTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingCellTableViewController.swift; sourceTree = "<group>"; };
 		8ABBE0AD1F3FC7C2002CD773 /* ExpensesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpensesTableViewCell.swift; sourceTree = "<group>"; };
+		8ABBE0B01F3FEE3F002CD773 /* Expense.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Expense.xcdatamodel; sourceTree = "<group>"; };
 		E07AEC857FB080A0B3D75E9C /* Pods-Budget Up.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budget Up.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Budget Up/Pods-Budget Up.debug.xcconfig"; sourceTree = "<group>"; };
 		EACD94F7B4CD5420AFADB7C8 /* Pods_Budget_Up.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Budget_Up.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,6 +80,7 @@
 				8A46ED7B1F2D3A4D00C1A74E /* ViewController.swift */,
 				8A46ED8D1F2D59D700C1A74E /* FoldingCellTableViewController.swift */,
 				8A46ED7D1F2D3A4D00C1A74E /* Main.storyboard */,
+				8ABBE0AF1F3FEE3F002CD773 /* Expense.xcdatamodeld */,
 				8A46ED801F2D3A4D00C1A74E /* Assets.xcassets */,
 				8A46ED821F2D3A4D00C1A74E /* LaunchScreen.storyboard */,
 				8A46ED851F2D3A4D00C1A74E /* Info.plist */,
@@ -220,6 +223,7 @@
 				8ABBE0AE1F3FC7C2002CD773 /* ExpensesTableViewCell.swift in Sources */,
 				8A46ED7C1F2D3A4D00C1A74E /* ViewController.swift in Sources */,
 				8A46ED7A1F2D3A4D00C1A74E /* AppDelegate.swift in Sources */,
+				8ABBE0B11F3FEE3F002CD773 /* Expense.xcdatamodeld in Sources */,
 				8A46ED8E1F2D59D700C1A74E /* FoldingCellTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +391,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8ABBE0AF1F3FEE3F002CD773 /* Expense.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8ABBE0B01F3FEE3F002CD773 /* Expense.xcdatamodel */,
+			);
+			currentVersion = 8ABBE0B01F3FEE3F002CD773 /* Expense.xcdatamodel */;
+			path = Expense.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8A46ED6E1F2D3A4D00C1A74E /* Project object */;
 }

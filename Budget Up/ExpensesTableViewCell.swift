@@ -9,6 +9,8 @@
 import UIKit
 
 class ExpensesTableViewCell: UITableViewCell {
+    @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var requiredAmountTextField: UITextField!
 
     override func awakeFromNib() {
         super.awakeFromNib()
